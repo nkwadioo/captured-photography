@@ -1,0 +1,199 @@
+﻿@import url(../lib/bootstrap/css/bootstrap.css);
+@import url(icomoon.css);
+@import url(../lib/font-awesome-4.7.0/css/font-awesome.min.css);
+
+
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+
+.rotate90Deg{
+	transform: rotate(90deg);
+}
+/*
+	Start HEADER Style sheet 
+*/
+
+header{
+ 
+}
+
+
+/* 
+	End HEADER Style sheet 
+*/
+
+section{
+	
+}
+
+
+.top_nav{
+	padding: 40px 0px 54px;
+}
+
+.top_nav
+	p 
+		span{
+			margin-left: 25px;
+			border-right: 2px solid black;
+			padding-right: 20px;
+		}
+
+
+.top_nav
+	p 
+		span:last-child{
+			border-right: unset;
+			padding-right: unset;
+		}
+
+.main_nav
+	.nav
+		li{
+		background-color: #09bda4;
+		padding: 30px 20px;
+		color: white;
+		border-right: 2px solid white;
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+
+.main_nav
+	.nav
+		li:last-child{
+			border-right: unset;	
+		}
+
+
+@media (max-width: 560px) {
+    .main_nav
+		.nav
+			li{
+				font-size: 0.6em;
+				padding: 20px 20px;
+				font-weight: 700;
+	}
+
+	.top_nav
+		p 
+			span{
+				font-size: 0.7em;
+				padding-right: 15px;
+				margin-left: 15px;
+	}
+	
+}
+
+@media (max-width: 380px) {
+    .main_nav
+		.nav
+			li{
+				font-size: 0.55em;
+				padding: 10px;
+				font-weight: 700;
+	}
+
+	.top_nav
+		p 
+			span{
+				font-size: 0.6em;
+	}
+	
+}
+
+.caption{
+	text-transform: uppercase;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+
+
+
+.jambotron{
+	position: relative;
+	display: flex;
+	/*
+
+	max-height: 500px;
+	overflow-x: hidden;
+	overflow-y: hidden;*/
+}
+
+.jambotron
+	img{
+	    display: block;
+	    max-width: 100%;
+	    height: 400px;
+	}
+.jambotron
+	img.big-image{
+		min-width: 100vw;
+		margin: 0 calc(-50vw + 50%);
+	}
+
+.card-holder{
+    /*padding-left: 30px;
+    padding-right: 30px;*/
+}
+
+.card-wraper{
+	box-sizing: border-box;
+	box-shadow: 0px 6px 20px -7px black;
+	position: relative;
+	transform: translateY(-50%);
+	display: flex;
+
+}
+
+
+.card{
+	background-color: white;
+	padding: 30px 5px;
+	position: relative;
+}
+
+.card::after{
+    content: '';
+    height: 60%;
+    width: 1px;
+    background-color: black;
+    position: absolute;
+}
+
+.card:last-child::after{
+	height: unset;
+    width: unset;
+    background-color: unset;
+}
+
+.card
+	span.icon{
+		font-size: 33px;
+		color: maroon;
+	}
+
+.card
+	.title{
+		font-weight: 900;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+.card
+	.hero{
+		font-weight: 500;
+		opacity: 0.75;
+	}
+
+.card
+	.hero
+		p{
+			margin-bottom: 0;
+		}
