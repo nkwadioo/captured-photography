@@ -1,0 +1,127 @@
+.loaderWrapper{
+	position: absolute;
+	left: 50%;
+	top: 44%;
+	transform: translate(-50%, -50%)
+}
+
+.loader{
+	position: relative;
+	width: 180px;
+    height: 225px;
+}
+
+.loader img{
+	position: absolute;
+	left: 0;
+	height: 225px;
+}
+
+.loader #eye{
+	top: 45px;
+    left: 15px;
+    height: 140px;
+    /*background-image: linear-gradient(102deg, 
+			#ea4747, #bf8484, #f5e2e2, 
+			#d68989, #d4b3b3, #e98585, 
+			#c8b6b6, #eb8e8e, #938a8a, brown);*/
+    border-radius: 50%;
+    animation: eyecolor 4s ease infinite;
+}
+
+.loader::before{
+    content: '';
+    position: absolute;
+    height: 112px;
+    width: 112px;
+    /*background-color: #ffffff5e;*/
+    box-shadow: inset 20px -13px 10px 14px #ffffff7d;
+    /* border: 5px solid black; */
+    top: 58px;
+    left: 28px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.loader::after{
+	content: 'Captured Photography presents';
+    width: 310px;
+    font-size: 30px;
+    position: absolute;
+    top: 230px;
+    left: -64px;
+    text-align: center;
+    font-family: 'Caveat', cursive !important;
+    /*border-radius: 50%;*/
+    z-index: 2;
+    animation: loading 0.7s ease infinite;
+}
+
+
+
+#lids{
+	/*transform: rotate3d(1,1,0, 6.6deg);*/
+	animation: roundabout 4.6s reverse linear infinite;
+}
+
+#eye.leave, .loaderWrapper.leave{
+	transition: 1.1s transform ease;
+	transform: scale(0);
+}
+
+#lids.leave{
+	transition: 1.1s transform ease;
+	transform: scale(0);
+}
+
+/*@keyframes shrink{
+	0%{
+		transform: scale(1.1);
+	}
+	100%{
+		transform: scale(0);
+	}
+}*/
+
+
+@keyframes roundabout{
+	0%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+
+
+
+
+@keyframes eyecolor{
+	0%{ /*brown*/
+		background-image: linear-gradient(102deg, 
+			#ea4747, #ea8282, #ffbdbd, 
+			#fdb7b7, #fc9393, #ffb8b8, 
+			#f7a0a0, #fa5c5c, #938a8a, brown);
+	}
+	25%{ /*blue*/
+		background-image: linear-gradient(64deg, 
+    	#cfcff4, #8b8be8, #aaaaea, #6262c1, #a1a3f7,
+    	#7878df, #adb1f1, #6767d2, #f3f3f3, blue);
+	}
+	50%{ /*green*/
+		background-image: linear-gradient(64deg, 
+    	#38c738, #7feb7f, #a8e3b0, #6ab26a, #a8d0ab,
+    	#72e872, #65cf65, #61b861, #38ac38, green);
+	}
+	75%{ /*black*/
+		background-image: linear-gradient(78deg, 
+    	#5d5858, #787474, #8d8a8a, #9b9898, #707070,
+    	#585555, #5a5959, #b0b0b0, #6c6c6c, black);
+	}
+	100%{ /*brown*/
+		background-image: linear-gradient(102deg, 
+			#ea4747, #ea8282, #ffbdbd, 
+			#fdb7b7, #fc9393, #ffb8b8, 
+			#f7a0a0, #fa5c5c, #938a8a, brown);
+	}
+}
